@@ -9,104 +9,73 @@ import UIKit
 
 class TableViewController: UITableViewController {
     
-    var Cars: [Car] = []
+    var cars: [Car] = []
+    let errorCar: Car = Car(manufacturer: "Error",
+                            model: "Error",
+                            body: Car.Body.SUV,
+                            yearOfIssue: -1,
+                            carNumber: "")
 
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        cars.append(Car(manufacturer: "Honda",
+                        model: "Civic",
+                        body: Car.Body.Hatch,
+                        yearOfIssue: 1999,
+                        carNumber: "X443CH38"))
+        cars.append(Car(manufacturer: "Nissan",
+                        model: "X-Trail",
+                        body: Car.Body.SUV,
+                        yearOfIssue: 2010,
+                        carNumber: ""))
+        cars.append(Car(manufacturer: "Honda",
+                        model: "Civic",
+                        body: Car.Body.Hatch,
+                        yearOfIssue: 1999,
+                        carNumber: "X443CH38"))
+        tableView.rowHeight = 100.0
+        
+    }
+    @IBAction func touchFilterButton(_ sender: UIButton)
+    {
+        cars = cars.sorted(by: {$0.body.rawValue > $1.body.rawValue})
+        tableView.reloadData()
     }
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    {
+        return cars.count
     }
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
-    }
-
-    @IBAction func touchAddButton(_ sender: UIBarButtonItem) {
-        let alert = UIAlertController(title: "Параметры авто", message: "\n\n\n\n\n\n\n\n\n", preferredStyle: .alert)
-        
-        let picker = UIPickerView(frame: CGRect(x: 0, y: 50, width: 260, height: 162))
-        func picker(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-            return Car.body.count
+    @IBAction func unwindSegue(unwindSegue: UIStoryboardSegue)
+    {
+        if unwindSegue.identifier == "addCarSegue"
+        {
+            let vc = unwindSegue.source as! AddCarViewController
+            cars.append(vc.newCar ?? errorCar)
+            print(vc.newCar ?? errorCar)
+            tableView.reloadData()
         }
-        
-        
-        
-        
-        
-        alert.view.addSubview(picker)
-        
-        let action = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil)
-
-        alert.addAction(action)
-        present(alert, animated: true, completion: {
-            picker.frame.size.width = alert.view.frame.size.width
-        })
     }
-    /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+    {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
+        let checkYear = cars[indexPath.row].yearOfIssue == -1 ? "-" : "\(cars[indexPath.row].yearOfIssue)"
+        
+        cell.textLabel?.text = """
+            Марка: \(cars[indexPath.row].manufacturer)
+            Модель: \(cars[indexPath.row].model)
+            Год: \(checkYear)
+        """
+        cell.detailTextLabel?.text = "\nКузов: \(cars[indexPath.row].body.rawValue)"
 
         return cell
     }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
+    
 
 }

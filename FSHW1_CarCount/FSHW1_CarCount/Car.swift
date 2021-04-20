@@ -10,17 +10,13 @@ import Foundation
 struct Car {
     let manufacturer: String
     let model: String
-    enum body: CaseIterable {
+    let body: Body
+    enum Body: String, CaseIterable {
         case SUV
         case Sedan
         case Van
-        case MiniVan
-        case MicroVan
-        case Cabriolet
-        case Targa
         case Coupe
-        
-        static var count: Int { return body.Coupe.hashValue + 1}
+        case Hatch
     }
     let yearOfIssue: Int
     let carNumber: String

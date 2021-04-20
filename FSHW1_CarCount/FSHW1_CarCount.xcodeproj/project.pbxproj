@@ -14,6 +14,7 @@
 		28705CD326283BB500A79306 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28705CD126283BB500A79306 /* LaunchScreen.storyboard */; };
 		28705CE22628491C00A79306 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28705CE12628491C00A79306 /* TableViewController.swift */; };
 		28705CE826284DA500A79306 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28705CE726284DA500A79306 /* Car.swift */; };
+		28BA3AC9262C796000BE06AC /* AddCarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BA3AC8262C796000BE06AC /* AddCarViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		28705CD426283BB500A79306 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		28705CE12628491C00A79306 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		28705CE726284DA500A79306 /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
+		28BA3AC8262C796000BE06AC /* AddCarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCarViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				28705CC626283BB200A79306 /* AppDelegate.swift */,
 				28705CC826283BB200A79306 /* SceneDelegate.swift */,
 				28705CE12628491C00A79306 /* TableViewController.swift */,
+				28BA3AC8262C796000BE06AC /* AddCarViewController.swift */,
 				28705CCC26283BB200A79306 /* Main.storyboard */,
 				28705CCF26283BB500A79306 /* Assets.xcassets */,
 				28705CD126283BB500A79306 /* LaunchScreen.storyboard */,
@@ -142,6 +145,7 @@
 			files = (
 				28705CC726283BB200A79306 /* AppDelegate.swift in Sources */,
 				28705CE22628491C00A79306 /* TableViewController.swift in Sources */,
+				28BA3AC9262C796000BE06AC /* AddCarViewController.swift in Sources */,
 				28705CE826284DA500A79306 /* Car.swift in Sources */,
 				28705CC926283BB200A79306 /* SceneDelegate.swift in Sources */,
 			);
