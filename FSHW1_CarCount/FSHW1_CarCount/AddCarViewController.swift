@@ -23,8 +23,8 @@ class AddCarViewController: UIViewController
     {
         super.viewDidLoad()
 
-        pickerView.delegate = self
-        pickerView.dataSource = self
+        self.pickerView.delegate = self
+        self.pickerView.dataSource = self
         bodyTextField.inputView = pickerView
         
         manufactureTextField.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
@@ -63,10 +63,9 @@ class AddCarViewController: UIViewController
     {
         newCar = Car(manufacturer: manufactureTextField.text ?? "Ошибка",
                          model: modelTextField.text ?? "Ошибка",
-                         body: Car.Body.init(rawValue: bodyTextField.text!) ?? Car.Body.SUV,
+                         body: Car.Body.init(rawValue: bodyTextField.text ?? "SUV") ?? Car.Body.SUV,
                          yearOfIssue: Int(yearTextField.text ?? "-1") ?? -1,
                          carNumber: numberTextField.text ?? "-")
-        print(newCar!)
     }
 
 }
