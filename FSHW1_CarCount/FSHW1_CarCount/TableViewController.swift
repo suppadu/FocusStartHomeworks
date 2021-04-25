@@ -12,7 +12,7 @@ class TableViewController: UITableViewController {
     var cars: [Car] = []
     let errorCar: Car = Car(manufacturer: "Error",
                             model: "Error",
-                            body: Car.Body.SUV,
+                            body: Car.Body.suv,
                             yearOfIssue: -1,
                             carNumber: "")
 
@@ -21,17 +21,17 @@ class TableViewController: UITableViewController {
         super.viewDidLoad()
         cars.append(Car(manufacturer: "Honda",
                         model: "Civic",
-                        body: Car.Body.Hatch,
+                        body: Car.Body.hatch,
                         yearOfIssue: 1999,
                         carNumber: "X443CH38"))
         cars.append(Car(manufacturer: "Nissan",
                         model: "X-Trail",
-                        body: Car.Body.SUV,
+                        body: Car.Body.suv,
                         yearOfIssue: 2010,
                         carNumber: ""))
         cars.append(Car(manufacturer: "Honda",
                         model: "Civic",
-                        body: Car.Body.Hatch,
+                        body: Car.Body.hatch,
                         yearOfIssue: 1999,
                         carNumber: "X443CH38"))
         tableView.rowHeight = 100.0

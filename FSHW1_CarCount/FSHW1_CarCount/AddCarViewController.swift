@@ -63,7 +63,7 @@ class AddCarViewController: UIViewController
     {
         newCar = Car(manufacturer: manufactureTextField.text ?? "Ошибка",
                          model: modelTextField.text ?? "Ошибка",
-                         body: Car.Body.init(rawValue: bodyTextField.text ?? "SUV") ?? Car.Body.SUV,
+                         body: Car.Body.init(rawValue: bodyTextField.text ?? "SUV") ?? Car.Body.suv,
                          yearOfIssue: Int(yearTextField.text ?? "-1") ?? -1,
                          carNumber: numberTextField.text ?? "-")
     }
@@ -81,7 +81,7 @@ extension AddCarViewController: UIPickerViewDelegate, UIPickerViewDataSource
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        bodyTextField.text = Car.Body.SUV.rawValue
+        bodyTextField.text = Car.Body.suv.rawValue
         return Car.Body.allCases[row].rawValue
     }
     
