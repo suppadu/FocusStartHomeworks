@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ucc-IN-b9u">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Dev-->
+        <scene sceneID="OxW-Bk-Bl0">
+            <objects>
+                <viewController id="QPE-7N-ZeX" customClass="DevViewController" customModule="HW3" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9mk-kI-7eY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="u8y-qi-a9L"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Dev" image="graduationcap" catalog="system" id="x5w-cL-JtL"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7el-lq-acI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-804" y="-15"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="59r-xn-P5X">
+            <objects>
+                <viewController id="RT3-SD-xEY" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fMK-9B-q3b">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ФИО:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="diR-5V-vBS">
+                                <rect key="frame" x="20" y="44" width="56" height="27"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Константинов Дмитрий Андреевич" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FdP-x3-hCB">
+                                <rect key="frame" x="20" y="79" width="374" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Возраст:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8P9-iu-Cz4">
+                                <rect key="frame" x="20" y="111" width="88" height="27"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="24" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T59-eh-y5D">
+                                <rect key="frame" x="20" y="146" width="26" height="27"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Место рождения:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oFG-vt-HNJ">
+                                <rect key="frame" x="20" y="181" width="176" height="27"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Киренск" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kye-Eu-bwM">
+                                <rect key="frame" x="20" y="216" width="86" height="27"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Место жительства:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jOX-Ku-duj">
+                                <rect key="frame" x="20" y="251" width="192" height="27"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Иркутск" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lik-lJ-vNN">
+                                <rect key="frame" x="20" y="286" width="83" height="27"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="G5X-5T-UEB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="jOX-Ku-duj" firstAttribute="leading" secondItem="G5X-5T-UEB" secondAttribute="leading" constant="20" id="09f-o3-izj"/>
+                            <constraint firstItem="lik-lJ-vNN" firstAttribute="top" secondItem="jOX-Ku-duj" secondAttribute="bottom" constant="8" symbolic="YES" id="5FJ-KN-sKh"/>
+                            <constraint firstItem="8P9-iu-Cz4" firstAttribute="leading" secondItem="G5X-5T-UEB" secondAttribute="leading" constant="20" id="5pT-3y-PSI"/>
+                            <constraint firstItem="T59-eh-y5D" firstAttribute="leading" secondItem="G5X-5T-UEB" secondAttribute="leading" constant="20" id="721-Gx-egi"/>
+                            <constraint firstItem="diR-5V-vBS" firstAttribute="top" secondItem="G5X-5T-UEB" secondAttribute="top" id="9D9-a7-fQ9"/>
+                            <constraint firstItem="FdP-x3-hCB" firstAttribute="top" secondItem="diR-5V-vBS" secondAttribute="bottom" constant="8" symbolic="YES" id="Kka-5M-wcU"/>
+                            <constraint firstItem="8P9-iu-Cz4" firstAttribute="top" secondItem="FdP-x3-hCB" secondAttribute="bottom" constant="8" symbolic="YES" id="M7t-Le-79n"/>
+                            <constraint firstItem="lik-lJ-vNN" firstAttribute="leading" secondItem="G5X-5T-UEB" secondAttribute="leading" constant="20" id="QlP-YQ-XkH"/>
+                            <constraint firstItem="kye-Eu-bwM" firstAttribute="top" secondItem="oFG-vt-HNJ" secondAttribute="bottom" constant="8" symbolic="YES" id="RWA-Wn-kU7"/>
+                            <constraint firstItem="FdP-x3-hCB" firstAttribute="leading" secondItem="G5X-5T-UEB" secondAttribute="leading" constant="20" id="Vvg-ym-ZV1"/>
+                            <constraint firstItem="T59-eh-y5D" firstAttribute="top" secondItem="8P9-iu-Cz4" secondAttribute="bottom" constant="8" symbolic="YES" id="XKf-6q-wpA"/>
+                            <constraint firstItem="jOX-Ku-duj" firstAttribute="top" secondItem="kye-Eu-bwM" secondAttribute="bottom" constant="8" symbolic="YES" id="bGR-nC-Gen"/>
+                            <constraint firstItem="diR-5V-vBS" firstAttribute="leading" secondItem="G5X-5T-UEB" secondAttribute="leading" constant="20" id="f1C-Pa-UzJ"/>
+                            <constraint firstItem="oFG-vt-HNJ" firstAttribute="leading" secondItem="G5X-5T-UEB" secondAttribute="leading" constant="20" id="fGu-JM-qSf"/>
+                            <constraint firstItem="kye-Eu-bwM" firstAttribute="leading" secondItem="G5X-5T-UEB" secondAttribute="leading" constant="20" id="gu9-jn-af8"/>
+                            <constraint firstItem="oFG-vt-HNJ" firstAttribute="top" secondItem="T59-eh-y5D" secondAttribute="bottom" constant="8" symbolic="YES" id="lNY-qw-y6b"/>
+                            <constraint firstItem="G5X-5T-UEB" firstAttribute="trailing" secondItem="FdP-x3-hCB" secondAttribute="trailing" constant="20" id="reM-ps-Zmo"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Main" image="person" catalog="system" id="94x-yB-D7K"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ia6-b4-sig" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-803" y="-669"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="kbW-1c-Rlk">
+            <objects>
+                <tabBarController id="ucc-IN-b9u" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ZCT-63-KVf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="RT3-SD-xEY" kind="relationship" relationship="viewControllers" id="K0p-Bn-DbQ"/>
+                        <segue destination="QPE-7N-ZeX" kind="relationship" relationship="viewControllers" id="NOw-xf-oLd"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="6os-YE-VaR"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Ac-Ry-E1x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1991" y="-15"/>
+        </scene>
+        <!--Hobby-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="HobbyViewController" customModule="HW3" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Hobby" image="burst" catalog="system" id="3da-JT-Khx"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-804" y="721"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="burst" catalog="system" width="128" height="115"/>
+        <image name="graduationcap" catalog="system" width="128" height="106"/>
+        <image name="person" catalog="system" width="128" height="117"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
